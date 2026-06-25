@@ -1,5 +1,5 @@
-memory/
-AMBA_AXI_Implementation_Plan.md/
-AXI4_IMPLEMENTATION_PLAN.md/
-axi_spec.txt
-gemini_axi4.md
+/memory
+/AMBA_AXI_Implementation_Plan.md
+/AXI4_IMPLEMENTATION_PLAN.md
+/axi_spec.txt
+/gemini_axi4.md
