@@ -1,4 +1,4 @@
-memory/.*
+memory/.md
 AMBA_AXI_Implementation_Plan.md
 AXI4_IMPLEMENTATION_PLAN.md
 axi_spec.txt
