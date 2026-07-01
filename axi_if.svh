@@ -74,6 +74,55 @@ interface axi_if;
     logic RVALID;
     logic RREADY;
 
+    modport master (
+        input ACLK, ARESETn,
+
+        //Write Address Channel Signals
+        output AWID, AWADDR, AWLEN, AWSIZE, AWBURST, AWLOCK, AWCACHE, AWPROT, AWQOS, AWREGION, AWUSER, AWVALID,
+        input AWREADY,
+
+        //Write Data Channel Signals
+        output WID, WDATA, WSTRB, WLAST, WUSER, WVALID,
+        input WREADY,
+
+        //Write Response Channel Signals
+        input BID, BRESP, BUSER, BVALID,
+        output BREADY,
+
+        //Read Address Channel Signals
+        output ARID, ARADDR, ARLEN, ARSIZE, ARBURST, ARLOCK, ACACHE, ARPROT, ARQOS, ARREGION, ARUSER, ARVALID,
+        input ARREADY,
+
+        //Read Data Channel Signals
+        input RID, RDATA, RRESP, RLAST, RUSER, RVALID,
+        output RREADY
+
+    );
+
+    modport slave (
+        input ACLK, ARESETn,
+        
+        //Write Address Channel Signals
+        input AWID, AWADDR, AWLEN, AWSIZE, AWBURST, AWLOCK, AWCACHE, AWPROT, AWQOS, AWREGION, AWUSER, AWVALID,
+        output AWREADY,
+
+        //Write Data Channel Signals
+        input WID, WDATA, WSTRB, WLAST, WUSER, WVALID,
+        output WREADY,
+
+        //Write Response Channel Signals
+        output BID, BRESP, BUSER, BVALID,
+        input BREADY,
+
+        //Read Address Channel Signals
+        input ARID, ARADDR, ARLEN, ARSIZE, ARBURST, ARLOCK, ACACHE, ARPROT, ARQOS, ARREGION, ARUSER, ARVALID,
+        output ARREADY,
+
+        //Read Data Channel Signals
+        output RID, RDATA, RRESP, RLAST, RUSER, RVALID,
+        input RREADY
+        
+    );
 
 
 
